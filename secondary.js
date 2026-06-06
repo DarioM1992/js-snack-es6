@@ -38,3 +38,13 @@ for (const squadra of squadre) {
     squadra.punti = Math.floor(Math.random() * 101);
     quadra.falliSubiti = Math.floor (Math.random() * 301);
 }
+
+//creazione nuovo array con dentro solo nomi e falli subiti
+const nomeEFalliSubiti = squadre.map (squadra =>
+({
+    nome : squadra.nome,
+    falliSubiti : squadra.falliSubiti,
+})
+);
+
+console.log(nomeEFalliSubiti);
