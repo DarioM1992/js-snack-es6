@@ -45,4 +45,25 @@ const biciclette = [
     }
 ];
 
-console.log(biciclette)
+// tabella per vedere bici 
+console.table(biciclette)
+
+//calcolo con length per bici più leggera
+// let biciPesoMinore = biciclette[0];
+// for (let i = 1; i < biciclette.length; i++) {
+//     if (biciclette[i].peso < biciPesoMinore.peso) {
+//         biciPesoMinore = biciclette[i];
+//     }    
+// }
+// console.log(biciPesoMinore);
+
+//versione diversa di cercare bici più leggera con for of
+let biciPesoMinore = biciclette[0];
+
+for (const bici of biciclette) {
+    if (bici.peso < biciPesoMinore.peso) {
+        biciPesoMinore = bici;
+    }
+}
+
+console.log(biciPesoMinore);
