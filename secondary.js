@@ -39,12 +39,26 @@ for (const squadra of squadre) {
     squadra.falliSubiti = Math.floor (Math.random() * 301);
 }
 
-//creazione nuovo array con dentro solo nomi e falli subiti
-const nomeEFalliSubiti = squadre.map (squadra =>
-({
-    nome : squadra.nome,
-    falliSubiti : squadra.falliSubiti,
-})
-);
+// //creazione nuovo array con dentro solo nomi e falli subiti
+// const nomeEFalliSubiti = squadre.map (squadra =>
+// ({
+//     nome : squadra.nome,
+//     falliSubiti : squadra.falliSubiti,
+// })
+// );
 
-console.log(nomeEFalliSubiti);
+// console.log(nomeEFalliSubiti);
+
+
+//ora provo a creare nuovo array e poi pusho dentro nomi e fallisubiti
+
+const nomeEFalliSubiti = [];
+
+squadre.forEach (squadra => {
+    nomeEFalliSubiti.push ({
+    nome: squadra.nome,
+    falliSubiti: squadra.falliSubiti,
+    });
+});
+
+console.log(nomeEFalliSubiti)
