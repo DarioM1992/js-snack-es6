@@ -32,3 +32,9 @@ const squadre =  [
       falliSubiti: 0
     },        
 ];
+
+//genero numeri random da 0-100 per punti e da 0-300 per i falli subiti
+for (const squadra of squadre) {
+    squadra.punti = Math.floor(Math.random() * 101);
+    quadra.falliSubiti = Math.floor (Math.random() * 301);
+}
